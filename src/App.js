@@ -12,7 +12,17 @@ function App() {
       </div>
       <div className="bottom">
         <h1>You're Missing Out on Deals!</h1>
+        <div className="why">
+          <p>This is the first reason</p>
+        </div>
+        <div className="why">
+          <p>This is the second reason</p>
+        </div>
+        <div className="why">
+          <p>This is the third reason</p>
+        </div>
       </div>
+
       <LandingForm />
     </div>
   );

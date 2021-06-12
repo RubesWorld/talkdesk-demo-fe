@@ -2,18 +2,27 @@
   border: solid 1px black;
   display: flex;
   flex-direction: column;
-  width: 35%;
+  justify-content: center;
+  width: 30%;
   padding: 20px;
   position: absolute;
   top: 150px;
   left: 750px;
   z-index: 10;
   background-color: white;
+  h3 {
+    margin-bottom: 0;
+  }
+  p {
+    font-weight: bold;
+    color: #5405bd;
+  }
 }
 
 form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   label {
     font-size: 20px;
     font-weight: bold;
@@ -24,6 +33,7 @@ form {
     background-color: #5405bd;
     color: white;
     margin-top: 5px;
+    width: 95%;
     &:focus {
       color: white;
     }
