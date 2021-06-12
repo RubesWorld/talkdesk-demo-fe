@@ -1,0 +1,23 @@
+@import "./styles/form.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+}
+
+.top {
+  height: 40vh;
+  background-color: #5405bd;
+}
+
+.bottom {
+  height: 60vh;
+}
+
+.top-text {
+  margin-top: 0;
+  color: white;
+}

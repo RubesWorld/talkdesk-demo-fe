@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import react, { useEffect } from "react";
+import logo from "./logo.svg";
+import "./app.scss";
+import LandingForm from "./components/LandingForm";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="top">
+        <h1 className="top-text">Let's Speed Up Customer Call Backs</h1>
+        <h1 className="top-text">Why,You Ask?</h1>
+      </div>
+      <div className="bottom">
+        <h1>You're Missing Out on Deals!</h1>
+      </div>
+      <LandingForm />
     </div>
   );
 }
