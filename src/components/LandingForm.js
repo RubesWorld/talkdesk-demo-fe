@@ -28,16 +28,20 @@ function LandingForm() {
 
   const handleChange = (e) => {
     //* only the first value for name and contact phone number need to be updated here.
-    const { value, contact_phone_number } = e.target;
+    const { name, value } = e.target;
+    setFormDetails({ ...formDetails, [name]: value });
   };
 
-  const onSubmit = () => {};
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setFormDetails({});
+  };
 
   return (
     <div className="form-container">
       <h3>Answer a few questions and our team will contact you right away.*</h3>
       <p>*Guaranteed within 05 minutes.</p>
-      <form>
+      <form onSubmit={onSubmit}>
         <label htmlFor="name">Name</label>
         <input className="form-input" name="value"></input>
         <label htmlFor="number" className="form-label">
