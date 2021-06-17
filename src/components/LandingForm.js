@@ -30,7 +30,9 @@ function LandingForm() {
 
   return (
     <div className="form-container">
-      <h3>Answer a few questions and our team will contact you right away.*</h3>
+      <h3>
+        Input your phone number and our team will contact you right away.*
+      </h3>
       <p>*Guaranteed within 1 minute.</p>
       <form onSubmit={onSubmit}>
         {/* <label htmlFor="name">Name</label>
