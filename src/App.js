@@ -3,29 +3,17 @@ import axios from "axios";
 import "./app.scss";
 import Logo from "./img/talkdesk_logo.png";
 import LandingForm from "./components/LandingForm";
+import qs from "qs";
 
 function App() {
   useEffect(() => {
     axios
-      .request({
-        method: "POST",
-        url: "https://demoeng.talkdeskid.com/oauth/token",
-        headers: {
-          Authorization:
-            "Basic MGY0YmRiNWYxNTgyNDUyNmJmMjNkODZjMmQwYzlhYTc6amQ0c25LRU9xMmZ0WkNfaDdxWWthREtCYmo5SU93dEV4YVhLQ1RKWEt4RFczVi1lU0lMcVBEbm5Zb2hGbFIxVVZBQm1XS196NTNpeUZVNjdNc0RYemc=",
-          "content-type": "application/x-www-form-urlencoded",
-        },
-        data: {
-          scope: "callback:write",
-          grant_type: "client_credentials",
-        },
-      })
+      .get("/api/auth")
       .then((res) => {
-        console.log("auth response", res);
         localStorage.setItem("token", res.data.access_token);
       })
       .catch((err) => {
-        console.log("An error is happening", err);
+        console.log("An error is happening with axios token call", err);
       });
   }, []);
 

@@ -1,12 +1,12 @@
 import axios from "axios";
 
 export const axiosWithAuth = () => {
-  const token = window.localStorage.getItem("Bearer");
-
+  const token = localStorage.getItem("token");
   return axios.create({
     headers: {
-      Authorization: token,
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
     },
-    baseURL: " https://api.talkdeskapp.com/",
+    baseURL: "https://api.talkdeskapp.com",
   });
 };
