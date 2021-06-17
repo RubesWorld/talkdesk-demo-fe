@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { axiosWithAuth } from "../utils/axiosWithAuth";
+import { axiosWithAuth } from "../utils/auth/axiosWithAuth";
 
 const initialForm = {
   talkdesk_phone_number: "+14155786136",

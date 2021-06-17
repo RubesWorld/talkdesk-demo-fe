@@ -8,7 +8,7 @@ import qs from "qs";
 function App() {
   useEffect(() => {
     axios
-      .get("/api/auth")
+      .get("https://talkdesk-demo-challenge.herokuapp.com/api/auth")
       .then((res) => {
         localStorage.setItem("token", res.data.access_token);
       })
